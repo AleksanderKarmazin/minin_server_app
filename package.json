@@ -14,7 +14,7 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Sanjula De Alwis",
-  "license": "ISC",  
+  "license": "ISC",
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.1.16",
     "bcryptjs": "^2.4.3",

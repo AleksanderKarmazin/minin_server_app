@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const mongo_uri_my ='mongodb+srv://admin:AlLKW0AlP5woWvjH@cluster0.ubvwe.azure.mongodb.net/farmApp?retryWrites=true&w=majority'
+
 
 
 const connectDB = async () => {
