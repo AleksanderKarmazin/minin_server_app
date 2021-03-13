@@ -1,0 +1,162 @@
+
+1. userController
+
+1.1. Создание пользователя 
+
+endpoint
+http://localhost:5000/api/users
+
+req:
+{
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "password": "password",
+    "cropSelection": "cropSelection_1"
+
+}
+
+res:
+{
+    "_id": "601a9302a2df02101454ebed",
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "cropSelection": "cropSelection_1",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NDMwNywiZXhwIjoxNjE0OTQ2MzA3fQ.d5mOlaX6XbCmwq3P7AOnZRxKK9zrcssxC_dPcIAptho"
+}
+
+=================================================================
+{
+    "name": "ADMIN",
+    "email": "ADMIN@gmail.com",
+    "password": "password",
+    "cropSelection": "cropSelection_1"
+
+}
+
+{
+    "_id": "601aabd5a2df02101454ebee",
+    "name": "ADMIN",
+    "email": "ADMIN@gmail.com",
+    "cropSelection": "cropSelection_1",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWFhYmQ1YTJkZjAyMTAxNDU0ZWJlZSIsImlhdCI6MTYxMjM2MDY2MSwiZXhwIjoxNjE0OTUyNjYxfQ.1X-NRsx-p2XwFrJHOFbs_UayekZ3qsbsO9uqH0bcCAc"
+}
+
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWFhYmQ1YTJkZjAyMTAxNDU0ZWJlZSIsImlhdCI6MTYxMjM2MDY2MSwiZXhwIjoxNjE0OTUyNjYxfQ.1X-NRsx-p2XwFrJHOFbs_UayekZ3qsbsO9uqH0bcCAc"
+
+
+
+1.2. LOG in вход пользователя на портал 
+
+endpoint
+http://localhost:5000/api/users/login
+
+req:
+{
+    "email": "david@gmail.com",
+    "password": "password",
+
+}
+
+res:
+{
+    "_id": "601a9302a2df02101454ebed",
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "isAdmin": false,
+    "cropSelection": "cropSelection_1",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NzQ5MSwiZXhwIjoxNjE0OTQ5NDkxfQ.ZLNOVZ-_Us7Uy0ODNk7j9ngr60Ino-sljNaCjTaGd1k"
+}
+
+
+
+1. userController
+
+1.1. Создание пользователя 
+
+Endpoint- POST
+http://localhost:5000/api/users
+
+req:
+{
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "password": "password",
+    "cropSelection": "cropSelection_1"
+
+}
+
+res:
+{
+    "_id": "601a9302a2df02101454ebed",
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "cropSelection": "cropSelection_1",
+    "isAdmin": false,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NDMwNywiZXhwIjoxNjE0OTQ2MzA3fQ.d5mOlaX6XbCmwq3P7AOnZRxKK9zrcssxC_dPcIAptho"
+}
+
+
+1.2. LOG in вход пользователя на портал - POST
+
+endpoint
+http://localhost:5000/api/users/login
+
+req:
+{
+    "email": "david@gmail.com",
+    "password": "password",
+
+}
+
+res:
+{
+    "_id": "601a9302a2df02101454ebed",
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "isAdmin": false,
+    "cropSelection": "cropSelection_1",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NzQ5MSwiZXhwIjoxNjE0OTQ5NDkxfQ.ZLNOVZ-_Us7Uy0ODNk7j9ngr60Ino-sljNaCjTaGd1k"
+}
+
+
+
+
+1.3. Получить профиль пользователя - GET
+endpoint
+http://localhost:5000/api/users/profile?user=601a9302a2df02101454ebed
+Header: 
+KEY: authorization   
+VALUE: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NzQ5MSwiZXhwIjoxNjE0OTQ5NDkxfQ.ZLNOVZ-_Us7Uy0ODNk7j9ngr60Ino-sljNaCjTaGd1k
+Params 
+KEY: user 
+VALUE: 601a9302a2df02101454ebed
+
+1.4. Обновить профиль пользователя - PUT
+endpoint
+http://localhost:5000/api/users/profile?user=601a9302a2df02101454ebed
+Header: 
+KEY: authorization   
+VALUE: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMWE5MzAyYTJkZjAyMTAxNDU0ZWJlZCIsImlhdCI6MTYxMjM1NzQ5MSwiZXhwIjoxNjE0OTQ5NDkxfQ.ZLNOVZ-_Us7Uy0ODNk7j9ngr60Ino-sljNaCjTaGd1k
+Params 
+KEY: user 
+VALUE: 601a9302a2df02101454ebed
+
+req:
+{
+    "name": "david@gmail.com",
+    "email": "david@gmail.com",
+    "password": "password",
+    "cropSelection": "cropSelection_1"
+
+}
+{
+    "_id": "601aabd5a2df02101454ebee",
+    "name": "ADMIN",
+    "email": "ADMIN@gmail.com",
+    "cropSelection": "cropSelection_3",
+    "isAdmin": true
+}
+
+
